@@ -2,7 +2,7 @@
 FROM alpine:3.17
 
 # install dependency tools
-RUN apk add --no-cache net-tools iptables iproute2
+RUN apk add --no-cache net-tools iptables iproute2 wget
 
 # working directory
 WORKDIR /app
@@ -31,7 +31,7 @@ RUN chmod +x vsock-to-ip
 COPY dnsproxy ./
 RUN chmod +x dnsproxy
 
-COPY oyster-keygen
+COPY oyster-keygen ./
 RUN chmod +x oyster-keygen
 
 # supervisord config
