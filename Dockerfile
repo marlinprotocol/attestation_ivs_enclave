@@ -4,8 +4,6 @@ FROM alpine:3.17
 # install dependency tools
 RUN apk add --no-cache net-tools iptables iproute2 wget
 
-COPY transfer_params.bin ./params/transfer_params_prod.bin
-
 # working directory
 WORKDIR /app
 
