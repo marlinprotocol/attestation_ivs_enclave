@@ -40,9 +40,6 @@ COPY supervisord.conf /etc/supervisord.conf
 COPY oyster-attestation-verifier ./input-verification-executable
 RUN chmod +x input-verification-executable
 
-COPY ivs_client ./ivs-client
-RUN chmod +x ivs-client
-
 # setup.sh script that will act as entrypoint
 COPY setup.sh ./
 RUN chmod +x setup.sh
